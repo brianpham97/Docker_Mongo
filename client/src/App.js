@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const App = () => {
@@ -21,6 +21,10 @@ const App = () => {
       });
     }
   };
+
+  useEffect(() => {
+    getFriends()
+  })
 
   return (
     <div className="App">
